@@ -2,14 +2,14 @@
 
 A live mirror of an [Odyn](https://app.odyn.dev) project. Synced one-way from Odyn to GitHub on every successful production deploy, so every version of your code is preserved in your own repository.
 
-**Latest version:** v2
-**Deployed:** 2026-05-19T04:05:17.784Z
+**Latest version:** v3
+**Deployed:** 2026-05-19T05:37:20.333Z
 
 ## Layout
 
 - `src/` — current project source. Mirrors what you write in the Odyn editor.
-- `dist/v1/` … `dist/v2/` — built artifacts for each deploy. Versions accumulate; nothing here is ever overwritten.
-- `dist/latest/` — built artifacts for v2 (the most recent deploy). Overwritten on every deploy; files no longer produced are removed.
+- `dist/v1/` … `dist/v3/` — built artifacts for each deploy. Versions accumulate; nothing here is ever overwritten.
+- `dist/latest/` — built artifacts for v3 (the most recent deploy). Overwritten on every deploy; files no longer produced are removed.
 - Each deploy commit is tagged `v{n}`.
 
 ## One-way mirror
@@ -22,17 +22,17 @@ If this repo is **public** on GitHub, [jsDelivr](https://www.jsdelivr.com/github
 
 For jsDelivr embeds in production, **always pin to a version tag**. Tagged URLs are immutable and cached forever; branch-path URLs (`@main/dist/latest/...`) are cached for up to 12 hours, so they lag your deploys.
 
-### Pinned to v2 (recommended for jsDelivr — immutable, cached forever)
+### Pinned to v3 (recommended for jsDelivr — immutable, cached forever)
 
-- `index.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/index.js
-- `lib/gsap.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/lib/gsap.js
-- `lib/state.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/lib/state.js
-- `utils/media.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/utils/media.js
-- `chunk-7RTP2P7I.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/chunk-7RTP2P7I.js
-- `style.css` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/style.css
-- `README.md` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/README.md
-- `bundle.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/bundle.js
-- `bundle.css` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v2/dist/v2/bundle.css
+- `index.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/index.js
+- `lib/gsap.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/lib/gsap.js
+- `lib/state.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/lib/state.js
+- `utils/media.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/utils/media.js
+- `chunk-7RTP2P7I.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/chunk-7RTP2P7I.js
+- `style.css` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/style.css
+- `README.md` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/README.md
+- `bundle.js` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/bundle.js
+- `bundle.css` → https://cdn.jsdelivr.net/gh/CarterOgunsola/odyn-github-final-test@v3/dist/v3/bundle.css
 
 `dist/latest/` is best used for direct GitHub raw, GitHub Pages, or local checkout — not for jsDelivr-fronted production traffic.
 
