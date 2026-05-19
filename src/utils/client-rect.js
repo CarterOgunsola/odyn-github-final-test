@@ -18,3 +18,5 @@ export function clientRect(element) {
     ww: Resize.width,
   };
 }
+
+console.log("Hey")
